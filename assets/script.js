@@ -1,3 +1,4 @@
+// Efek ketik di header
 const teks = "Seorang Developer | Freelancer | Kreator";
 let i = 0;
 
@@ -10,15 +11,28 @@ function ketik() {
 }
 window.onload = ketik;
 
+// Fungsi Order WhatsApp
 function submitOrder(e) {
   e.preventDefault();
-  
+
+  // Ambil nilai dari form
   const nama = document.getElementById("nama").value.trim();
-  const layanan = document.getElementById("layanan").value;
-  const harga = document.getElementById("harga").value;
+  const layanan = document.getElementById("layanan").value.trim();
+  const harga = document.getElementById("harga").value.trim();
 
+  // Validasi sederhana
+  if (!nama || !layanan || !harga) {
+    alert("Mohon lengkapi semua data terlebih dahulu.");
+    return;
+  }
+
+  // Format pesan
   const pesan = `Halo, saya ${nama} ingin order layanan ${layanan} - ${harga}. Masih tersedia?`;
-  const url = `https://wa.me/628557000608?text=${encodeURIComponent(pesan)}`;
 
+  // Nomor admin WA
+  const admin = "628557000608";
+
+  // Buka WhatsApp
+  const url = `https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`;
   window.open(url, "_blank");
 }
