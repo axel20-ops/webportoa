@@ -1,4 +1,3 @@
-
 const teks = "Seorang Developer | Freelancer | Kreator";
 let i = 0;
 
@@ -17,7 +16,7 @@ function submitOrder(e) {
   const layanan = document.getElementById("layanan").value;
   const harga = document.getElementById("harga").value;
 
-  const pesan = `Halo, saya ${nama} (${kontak}) ingin order layanan ${layanan} - ${harga}. Masih tersedia?`;
+  const pesan = `Halo, saya ${nama} ingin order layanan ${layanan} - ${harga}. Masih tersedia?`;
   const url = `https://wa.me/628557000608?text=${encodeURIComponent(pesan)}`;
   window.open(url, "_blank");
 }
