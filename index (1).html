@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portofolio dan Jasa Nokos - Allan Charlotte"/>
+  <meta name="keywords" content="Allan Charlotte, portofolio, jasa nokos, developer, freelancer"/>
+  <meta name="author" content="Allan Charlotte"/>
+  <title>Allan Charlotte | Portofolio & Jasa</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Allan</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#order">Order Nokos</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" class="header-section">
+    <img src="https://files.catbox.moe/namafile.jpg" alt="Foto Profil" class="profile-img" />
+    <h2>Hai, Saya <span class="name">Allan Charlotte</span></h2>
+    <h3 class="typing"></h3>
+    <div class="buttons">
+      <a href="#portfolio" class="btn">Lihat Portofolio</a>
+      <a href="#contact" class="btn-secondary">Hubungi Saya</a>
+    </div>
+  </header>
+
+  <section id="portfolio" class="section">
+    <h2>Portofolio</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Project A</h3>
+        <p>Deskripsi singkat project A.</p>
+      </div>
+      <div class="card">
+        <h3>Project B</h3>
+        <p>Deskripsi singkat project B.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="section">
+    <h2>Order Nokos</h2>
+    <form onsubmit="submitOrder(event)">
+      <input type="text" id="nama" placeholder="Nama Lengkap" required />
+      <input type="text" id="kontak" placeholder="Kontak WhatsApp" required />
+      <select id="layanan" required>
+        <option value="">Pilih Layanan</option>
+        <option>WhatsApp</option>
+        <option>Telegram</option>
+      </select>
+      <select id="harga" required>
+        <option value="">Pilih Negara</option>
+        <option>Indonesia - Rp 3.000</option>
+        <option>Brazil - Rp 5.000</option>
+        <option>USA - Rp 6.000</option>
+      </select>
+      <button type="submit" class="btn">Order via WhatsApp</button>
+      <button type="button" class="btn-warning" onclick="alert('Dilarang gunakan untuk tindakan ilegal. Kami tidak bertanggung jawab atas penyalahgunaan.')">⚠️ Lihat Rules</button>
+    </form>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah lulusan SMK yang aktif mengembangkan project WhatsApp bot, membuat website, dan membuka jasa digital. Hobi saya eksplorasi teknologi dan membantu UMKM go digital.</p>
+    <ul>
+      <li>✅ HTML, CSS, JS</li>
+      <li>✅ WhatsApp Bot (Baileys)</li>
+      <li>✅ Hosting GitHub Pages</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Kontak Saya</h2>
+    <p>Hubungi saya melalui:</p>
+    <div class="buttons">
+      <a href="https://wa.me/6285640570185" class="btn">WhatsApp</a>
+      <a href="https://instagram.com/ini.dipoo" class="btn-secondary" target="_blank">Instagram</a>
+      <a href="mailto:akunpunyaalan@gmail.com" class="btn">Email</a>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <h2>Blog</h2>
+    <article>
+      <h3>Artikel Pertama</h3>
+      <p>Ini adalah artikel pendek pertama saya di blog ini. Saya akan berbagi tips dan pengalaman saya.</p>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Allan Charlotte. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
