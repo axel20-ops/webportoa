@@ -2,94 +2,105 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Jasa Nokos - Axel Lalala"/>
-  <meta name="keywords" content="Axel Lalala, jual nokos, developer, freelancer"/>
-  <meta name="author" content="Axel Lalala"/>
-  <title>Axel Lalala | jual nokos</title>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Axel Point — Your Digital Gateway</title>
+  <meta name="description" content="Personal branding & jualan nomor WhatsApp virtual (nokos) bertema cyberpunk futuristik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container">
-      <ul class="nav-links">
-        <li><a href="#home">Beranda</a></li>
-        <li><a href="#order">Order Nokos</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#contact">Kontak</a></li>
-        <li><a href="#blog">Blog</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header id="home" class="header-section">
-    <img src="https://files.catbox.moe/41p492.jpg" alt="Foto Profil" class="profile-img" />
-    <h2>Hai, Saya <span class="name">Axel Lalala</span></h2>
-    <h3 class="typing"></h3>
-    <div class="buttons">
-      <a href="#contact" class="btn-secondary">Hubungi Saya</a>
-    </div>
+  <div class="bg-grid"></div>
+  <header class="container nav">
+    <a class="brand" href="#home" aria-label="Logo">
+      <span class="brand-mark" id="brandMark">AX</span>
+      <span class="brand-name" id="brandName">Axel Point — Your Digital Gateway</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka menu">
+    <label for="nav-toggle" class="burger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#pricing">Harga</a>
+      <a href="#status">Status</a>
+      <a href="#contact">Hubungi</a>
+    </nav>
   </header>
 
-  <section id="order" class="section">
-    <h2>Order Nokos</h2>
-    <form onsubmit="submitOrder(event)">
-      <input type="text" id="nama" placeholder="Nama Lengkap" required />
-      <select id="layanan" required>
-        <option value="">Pilih Layanan</option>
-        <option>WhatsApp</option>
-      </select>
-      <select id="harga" required>
-        <option value="">Pilih Negara</option>
-        <option>Indonesia - Rp 8.000</option>
-        <option>Afghanistan - Rp 15.000</option>
-        <option>Arab Saudi - Rp 35.000</option>
-        <option>Itally - Rp 100.000</option>
-        <option>Makau - Rp 35.000</option>
-        <option>Rusia - Rp 20.000</option>
-        <option>Bangladesh - Rp 35.000</option>
-        <option>Yordania - Rp 30.000</option>
-        <option>El Salvador - Rp 40.000</option>
-        <option>Iraq - Rp 25.000</option>
-        <option>Mongolia - Rp 25.000</option>
-      </select>
-      <button type="submit" class="btn">Order via WhatsApp</button>
-      <button type="button" class="btn-warning" onclick="alert('Dilarang gunakan untuk tindakan ilegal. Kami tidak bertanggung jawab atas penyalahgunaan.')">⚠️ Lihat Rules</button>
-    </form>
-  </section>
+  <main id="home" class="container">
+    <section class="hero">
+      <h1 class="title glow" id="heroTitle">Axel Point — Your Digital Gateway</h1>
+      <p class="subtitle" id="heroTagline">Nomor WhatsApp virtual multi‑negara, ready pakai untuk kebutuhan verifikasi & bisnis.</p>
+      <div class="cta">
+        <a id="ctaBtn" class="btn primary glow" href="#" target="_blank" rel="noopener">Beli Sekarang</a>
+        <span class="rt-indicator" aria-live="polite">
+          <span class="dot pulse"></span> <span id="rtText">Realtime Status Aktif</span>
+        </span>
+      </div>
+    </section>
 
-  <section id="about" class="section">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah lulusan SMK yang aktif mengembangkan project WhatsApp bot, membuat website, dan membuka jasa digital. Hobi saya eksplorasi teknologi dan membantu UMKM go digital.</p>
-    <ul>
-      <li>✅ HTML, CSS, JS</li>
-      <li>✅ WhatsApp Bot (Baileys)</li>
-      <li>✅ Hosting GitHub Pages</li>
-    </ul>
-  </section>
+    <section id="pricing" class="card">
+      <div class="section-head">
+        <h2 class="section-title glow">Daftar Harga</h2>
+        <div class="toolbar">
+          <label class="search">
+            <input id="searchInput" type="search" placeholder="Cari negara atau kode...">
+          </label>
+          <select id="statusFilter" aria-label="Filter status">
+            <option value="all">Semua</option>
+            <option value="available">Tersedia</option>
+            <option value="soldout">Habis</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="price-table" aria-describedby="pricing">
+          <thead>
+            <tr>
+              <th>Nomor</th>
+              <th>Negara</th>
+              <th>Harga</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="priceBody"></tbody>
+        </table>
+      </div>
+      <p class="muted" id="lastUpdated">Diperbarui: —</p>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Kontak Saya</h2>
-    <p>Hubungi saya melalui:</p>
-    <div class="buttons">
-      <a href="https://wa.me/6285640570140" class="btn">WhatsApp</a>
-      <a href="https://instagram.com/axel.yn20" class="btn-secondary" target="_blank">Instagram</a>
-      <a href="mailto: axelid444@gmail.com" class="btn">Email</a>
-    </div>
-  </section>
+    <section id="status" class="card">
+      <h2 class="section-title glow">Status Ketersediaan</h2>
+      <div class="status-grid" id="statusGrid">
+        <!-- Filled by script.js -->
+      </div>
+      <div class="legend">
+        <span class="legend-item"><span class="badge available"></span>Tersedia</span>
+        <span class="legend-item"><span class="badge soldout"></span>Habis</span>
+      </div>
+    </section>
 
-  <section id="blog" class="section">
-    <h2>Blog</h2>
-    <article>
-      <h3>Artikel Pertama</h3>
-      <p>Ini adalah artikel pendek pertama saya di blog ini. Saya akan berbagi tips dan pengalaman saya.</p>
-    </article>
-  </section>
+    <section id="contact" class="card contact">
+      <h2 class="section-title glow">Hubungi</h2>
+      <div class="contact-buttons">
+        <a id="waBtn" class="btn neon icon" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.09 1.52 5.8L0 24l6.35-1.65A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 21.8c-1.94 0-3.75-.53-5.3-1.46l-.38-.22-3.74.97.99-3.64-.24-.39A9.76 9.76 0 0 1 2.2 12C2.2 6.57 6.57 2.2 12 2.2c2.6 0 5.02 1.01 6.86 2.86A9.7 9.7 0 0 1 21.8 12c0 5.43-4.37 9.8-9.8 9.8zm5.55-7.33c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.17.2-.35.23-.65.08-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.66-2.04-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.5-.18 0-.38-.02-.58-.02-.2 0-.52.07-.8.38-.28.3-1.06 1.03-1.06 2.51 0 1.48 1.09 2.92 1.24 3.12.15.2 2.15 3.28 5.21 4.6.73.32 1.3.5 1.75.64.73.23 1.4.2 1.93.12.59-.09 1.79-.73 2.05-1.43.25-.7.25-1.3.18-1.43-.08-.13-.27-.2-.57-.34z"/></svg>
+          WhatsApp
+        </a>
+        <a id="igBtn" class="btn neon icon" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.95.24 2.6.5.7.27 1.29.64 1.86 1.21.57.57.94 1.16 1.21 1.86.26.65.45 1.43.5 2.6.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.95-.5 2.6a4.84 4.84 0 0 1-1.21 1.86 4.84 4.84 0 0 1-1.86 1.21c-.65.26-1.43.45-2.6.5-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.95-.24-2.6-.5a4.84 4.84 0 0 1-1.86-1.21 4.84 4.84 0 0 1-1.21-1.86c-.26-.65-.45-1.43-.5-2.6C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.95.5-2.6.27-.7.64-1.29 1.21-1.86.57-.57 1.16-.94 1.86-1.21.65-.26 1.43-.45 2.6-.5C8.42 2.21 8.8 2.2 12 2.2m0-2.2C8.74 0 8.33.02 7.05.09 5.78.15 4.86.36 4.05.68 3.2 1.01 2.48 1.5 1.77 2.2c-.7.7-1.19 1.43-1.52 2.28-.32.81-.53 1.73-.59 3C-.41 8.77-.42 9.18-.42 12c0 2.82.01 3.23.06 4.51.06 1.27.27 2.19.59 3 .33.85.82 1.58 1.52 2.28.7.7 1.43 1.19 2.28 1.52.81.32 1.73.53 3 .59C8.77 24.41 9.18 24.42 12 24.42s3.23-.01 4.51-.06c1.27-.06 2.19-.27 3-.59.85-.33 1.58-.82 2.28-1.52.7-.7 1.19-1.43 1.52-2.28.32-.81.53-1.73.59-3 .05-1.28.06-1.69.06-4.51 0-2.82-.01-3.23-.06-4.51-.06-1.27-.27-2.19-.59-3-.33-.85-.82-1.58-1.52-2.28C21.52 1.5 20.8 1.01 19.95.68c-.81-.32-1.73-.53-3-.59C15.23.02 14.82 0 12 0z"/><circle cx="18.5" cy="5.5" r="1.5"/><path d="M12 5.8A6.2 6.2 0 1 0 12 18.2 6.2 6.2 0 0 0 12 5.8m0 10.2A4 4 0 1 1 12 8a4 4 0 0 1 0 8z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 Axel Lalala. All rights reserved.</p>
+  <footer class="container footer">
+    <small id="copyright">© <span id="year"></span> Axel Point. All rights reserved.</small>
+    <small class="muted">Dibuat dengan tema cyberpunk biru neon.</small>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
