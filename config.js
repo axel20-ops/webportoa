@@ -8,7 +8,7 @@ const SITE = {
   },
   socials: {
     whatsapp: "https://wa.me/628557000608",
-    instagram: "https://instagram.com/"
+    instagram: "https://instagram.com/aaa"
   },
   currency: "IDR",
   products: [
