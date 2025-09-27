@@ -4,11 +4,11 @@ const SITE = {
     name: "Axel Point — Your Digital Gateway",
     short: "AX",
     tagline: "Nomor WhatsApp virtual multi‑negara, ready pakai untuk verifikasi & scale bisnis kamu.",
-    ctaLink: "https://wa.me/6285640570185?text=Halo%20Axel%20Point,%20saya%20mau%20beli%20nokos."
+    ctaLink: "https://wa.me/628557000608?text=Halo%20Axel%20Point,%20saya%20mau%20beli%20nokos."
   },
   socials: {
-    whatsapp: "https://wa.me/6285640570185",
-    instagram: "https://instagram.com/axelpoint"
+    whatsapp: "https://wa.me/628557000608",
+    instagram: "https://instagram.com/"
   },
   currency: "IDR",
   products: [
